@@ -9,18 +9,18 @@ pipeline{
     stage('Build'){
       steps{
         echo 'Checking python Application'
-        bat 'python -m py_compile app.py'
+        bat 'python -m py_compile Test.java'
       }
     }
     stage('Test'){
       steps{
         echo 'Excecuting automated tests'
-        bat 'python -m unittest app'
+        bat 'python -m unittest Test'
       }
     }
     stage('Run Application'){
       steps{
-        bat 'python app.py'
+        bat 'python Test.java'
       }
     }
   }
