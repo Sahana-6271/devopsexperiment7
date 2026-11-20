@@ -1,4 +1,5 @@
 print("this is devops lab")
 a=10
 b=20
-print("add",a+b)
+c=40
+print("add",a+c)
