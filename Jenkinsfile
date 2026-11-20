@@ -32,3 +32,5 @@ pipeline{
     failure{
       echo 'CI pipeline failed'
     }
+  }
+}
