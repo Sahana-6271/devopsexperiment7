@@ -9,13 +9,13 @@ pipeline{
     stage('Build'){
       steps{
         echo 'Checking python Application'
-        bat 'python -m py compile app.py'
+        bat 'python -m py_compile app.py'
       }
     }
     stage('Test'){
       steps{
         echo 'Excecuting automated tests'
-        bat 'python -m py unittest app'
+        bat 'python -m unittest app'
       }
     }
     stage('Run Application'){
@@ -27,7 +27,7 @@ pipeline{
 
   post{
     success{
-      echo 'CI pipeline completed sucessfully'
+      echo 'CI pipeline completed successfully'
     }
     failure{
       echo 'CI pipeline failed'
